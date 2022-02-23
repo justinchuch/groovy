@@ -27,7 +27,9 @@ buildscript {
         jcenter()
         maven{
             name 'Bintray Javadoc Hotfix repo'
-            url 'https://dl.bintray.com/melix/gradle-javadoc-hotfix-plugin'
+//            url 'https://dl.bintray.com/melix/gradle-javadoc-hotfix-plugin'
+            url 'https://repo.spring.io/plugins-release'
+
         }
         maven {
             url "https://plugins.gradle.org/m2/"
@@ -97,7 +99,8 @@ allprojects {
             maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
         }
         jcenter()
-        maven { url 'https://dl.bintray.com/melix/thirdparty-apache' } // openbeans
+//        maven { url 'https://dl.bintray.com/melix/thirdparty-apache' } // openbeans
+        maven { url 'https://maven.repository.redhat.com/ga' } // openbeans
     }
 
     ext.buildDate = isReleaseVersion?new Date():new Date(0)
